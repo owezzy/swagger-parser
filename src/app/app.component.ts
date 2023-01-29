@@ -9,10 +9,14 @@ import SwaggerParser from "@apidevtools/swagger-parser";
 export class AppComponent implements OnInit{
   title = 'swagger-parser';
   data: any
+   url: string | undefined;
 
   ngOnInit(): void {
+    this.url = 'assets/dbaas.json'
 
-    SwaggerParser.parse('http://petstore.swagger.io/v2/swagger.json', (err, api) =>{
+    // 'http://petstore.swagger.io/v2/swagger.json'
+
+    SwaggerParser.parse(this.url, (err, api) =>{
       if (err) {
         console.error(err);
       }
