@@ -11,6 +11,13 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
 
-    SwaggerParser.parse('src/assets/swagger-files/petstore.yaml').then(r => console.log(r))
+    SwaggerParser.parse('http://petstore.swagger.io/v2/swagger.json', (err, api) =>{
+      if (err) {
+        console.error(err);
+      }
+      else {
+        console.log("API name: %s, Version: %s", api?.info.title, api?.info.version, api);
+      }
+    })
   }
 }
