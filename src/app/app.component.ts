@@ -8,6 +8,7 @@ import SwaggerParser from "@apidevtools/swagger-parser";
 })
 export class AppComponent implements OnInit{
   title = 'swagger-parser';
+  data: any
 
   ngOnInit(): void {
 
@@ -17,6 +18,7 @@ export class AppComponent implements OnInit{
       }
       else {
         console.log("API name: %s, Version: %s", api?.info.title, api?.info.version, api);
+        this.data = api
       }
     })
   }
