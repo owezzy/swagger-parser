@@ -31,6 +31,8 @@
       "util": [ "./node_modules/util" ],
       "buffer": [ "./node_modules/buffer" ],
       "process": [ "./node_modules/process" ],
+      "fs": [ "./node_modules/fs-web" ],
+      "js-yaml": [ "./node_modules/js-yaml" ],
     },
     "allowSyntheticDefaultImports": true
   },
